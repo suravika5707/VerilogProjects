@@ -22,6 +22,7 @@ The design is implemented using combinational logic, with no clock or reset inpu
 3. Supported Operations
 
 | Opcode | Operation | Description              |
+| :---   | :---      | :---                     |
 |  `000` | ADD       | Addition of A and B      |
 |  `001` | SUB       | Subtraction of B from A  |
 |  `010` | AND       | Bitwise AND              |
@@ -34,6 +35,7 @@ The design is implemented using combinational logic, with no clock or reset inpu
 4. Input and Output Signals
 
 | Signal   |  Width | Description                                      |
+| :---     | :---   | :---                                             |
 | A        | 8 bits | First operand                                    |
 | B        | 8 bits | Second operand                                   |
 | opcode   | 3 bits | Selects the ALU operation                        |
