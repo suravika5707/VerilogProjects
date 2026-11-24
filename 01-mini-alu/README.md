@@ -45,7 +45,7 @@ The design is implemented using combinational logic, with no clock or reset inpu
 | overflow |  1 bit | Indicates signed arithmetic overflow             |
 
 5. Project Structure
-
+ ```text
 01-mini-alu/
 │
 ├──alu.v
@@ -55,7 +55,8 @@ The design is implemented using combinational logic, with no clock or reset inpu
 ├──01-mini-alu-waveform.png
 │
 └── README.md
-
+ ```
+ 
 6. Design Methodology
 
 The ALU uses combinational logic to select and perform the requested operation.
@@ -88,7 +89,31 @@ Verification coverage
 - GTKWave
 - Git and GitHub
 
-9. Learning Outcomes
+9. Simulation & Waveforms
+
+Prerequisites
+* [Icarus Verilog](http://iverilog.icarus.com/) (for compilation and simulation)
+* [GTKWave](https://sourceforge.net) (for viewing `.vcd` waveform dumps)
+
+Running the Simulation
+i.Compile the design and testbench:
+   ```bash
+   iverilog -o sim alu.v alu_tb.v
+   ```
+ii.Run the simulation to generate the waveform file:
+   ```bash
+   vvp sim
+   ```
+iii.Open the waveform in GTKWave:
+   ```bash
+   gtkwave alu_wave.vcd
+   ```
+
+Expected Output
+![Simulation Waveform](01-mini-alu-waveform.png)
+
+
+10. Learning Outcomes
 
 Through this project, I explored:
 
@@ -100,9 +125,8 @@ Through this project, I explored:
 - Simulation waveform analysis
 - RTL debugging and verification
 
-10. Future Improvements
+11. Future Improvements
 
 - Extend the ALU with additional operations.
 - Add configurable shift amounts.
 - Integrate the ALU into a simple processor datapath.
-
